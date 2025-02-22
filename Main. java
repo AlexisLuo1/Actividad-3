@@ -1,0 +1,56 @@
+/*Actividad: Elaborar una aplicación de consola que permita almacenar información sobre un visitante a un edificio de 
+departamentos utilizando todos los tipos de datos primitivos en Java. Diseña un programa que declare y asigne valores 
+a variables para representar diferentes aspectos de la información del estudiante y luego imprima esos valores en pantalla.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese su nombre: ");
+        String nombre = sc.nextLine();
+
+        System.out.print("Ingrese su apellido: ");
+        String apellido = sc.nextLine();
+
+        System.out.print("Ingrese su edad: ");
+        byte edad = sc.nextByte();
+
+        System.out.print("Ingrese el número del apartamento que visita: ");
+        short numApartamento = sc.nextShort();
+
+        System.out.print("Ingrese su número de identificación: ");
+        int idVisitante = sc.nextInt();
+
+        System.out.print("Ingrese su número de teléfono: ");
+        long telefono = sc.nextLong();
+
+        System.out.print("Ingrese su altura en metros: ");
+        float altura = sc.nextFloat();
+
+        System.out.print("Ingrese su temperatura corporal en grados Celsius: ");
+        double temperatura = sc.nextDouble();
+
+        System.out.print("¿Es residente del edificio? (true o false): ");
+        boolean esResidente = sc.nextBoolean();
+
+        sc.nextLine();
+
+        System.out.print("Ingrese la inicial de su género (M/F/O): ");
+        char genero = sc.next().charAt(0);
+       
+        System.out.println("\n=== Información del Visitante ===");
+        System.out.println("Nombre: " + nombre + " " + apellido);
+        System.out.println("Edad: " + edad + " años");
+        System.out.println("Número de Apartamento Visitado: " + numApartamento);
+        System.out.println("Número de Identificación: " + idVisitante);
+        System.out.println("Teléfono: " + telefono);
+        System.out.println("Altura: " + altura + " m");
+        System.out.println("Temperatura Corporal: " + temperatura + " °C");
+        System.out.println("Residente del edificio: " + (esResidente ? "Sí" : "No"));
+        System.out.println("Género: " + genero);
+
+        sc.close(); 
+    }
+}
